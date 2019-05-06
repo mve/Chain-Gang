@@ -11,3 +11,10 @@ https://github.com/MikevanEgmond1998/Chain-Gang
 
 ## Trello:
 https://trello.com/b/mSbtbyk9/chain-gang
+
+## Install:
+Composer install <br>
+php artisan key:generate
+
+## Launch:
+php artisan serve
