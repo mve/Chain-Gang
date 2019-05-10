@@ -17,4 +17,5 @@ Composer install <br>
 php artisan key:generate
 
 ## Launch:
-php artisan serve
+* php artisan serve (Start de server op)
+* npm run watch (compile de scss)

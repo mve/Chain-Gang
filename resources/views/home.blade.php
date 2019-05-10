@@ -4,7 +4,7 @@
 
     <div class="container">
 
-        <h1>Chain Gang</h1>
+        <h1 class="title">Chain Gang</h1>
 
     </div>
 
