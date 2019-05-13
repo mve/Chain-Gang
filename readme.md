@@ -17,4 +17,6 @@ Composer install <br>
 php artisan key:generate
 
 ## Launch:
+composer update <br>
+php artisan migrate <br>
 php artisan serve
