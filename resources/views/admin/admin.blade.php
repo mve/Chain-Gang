@@ -2,6 +2,6 @@
 
 @section('content')
 
-    <h1>admin</h1>
+        <h1 style="text-align: center; height: 500px;">admin panel content here!</h1>
 
 @endsection
