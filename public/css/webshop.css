@@ -1,0 +1,78 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+.header-image {
+  height: 250px;
+  background-image: url("/images/template/header.png");
+  background-size: cover;
+}
+
+.header-logo {
+  max-width: 200px;
+}
+
+.navbar-logo {
+  max-width: 50px;
+}
+
+.boven-balk {
+  background-color: #0d4e6a;
+}
+
+.mountainbike-quote {
+  height: 250px;
+  background-image: url("/images/template/header-mountain-bikes.jpg");
+  background-size: cover;
+}
+
+.copyright-balk {
+  height: 50px;
+  background-color: #0d4e6a;
+}
+
+.footer-content {
+  height: 200px;
+  background-color: #5996b0;
+}
+
+.footer-content a {
+  color: white !important;
+  text-decoration: none;
+}
+
+.footer-content ul {
+  list-style-type: none;
+}
+
+.navbar {
+  background-color: #0d4e6a;
+  color: white;
+  font-size: 18px;
+}
+
+.nav-link {
+  color: white !important;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  color: #eeee !important;
+  text-decoration: none;
+}
+
+.nav-item {
+  padding: 0 10px;
+}
+
+.navbar-brand {
+  padding-right: 30px;
+}
+
+.card-title {
+  font-weight: bold;
+  color: #009fe3;
+}
+
