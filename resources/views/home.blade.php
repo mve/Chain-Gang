@@ -1,5 +1,7 @@
 @extends('common_template')
 
+{{--@extends('layouts.app')--}}
+
 @section('content')
     <!--------- nieuwe producten --------->
     <div class="container py-3">
