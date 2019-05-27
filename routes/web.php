@@ -19,6 +19,12 @@ Route::get('/admin', function () {
     return view('admin.admin');
 });
 
+Route::get('/account', function () {
+    return view('profile');
+});
+
+Route::resource('users', 'UserController');
+
 Auth::routes();
 
 Route::get('/', 'HomeController@index')->name('home');
