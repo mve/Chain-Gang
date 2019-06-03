@@ -4,6 +4,10 @@ body {
   height: 100%;
 }
 
+.schaduw {
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
 .header-image {
   height: 250px;
   background-image: url("/images/template/header.png");
@@ -74,5 +78,23 @@ body {
 .card-title {
   font-weight: bold;
   color: #009fe3;
+}
+
+.product-title {
+  color: #009fe3;
+}
+
+.product-image {
+  -o-object-fit: cover;
+     object-fit: cover;
+  min-height: 250px;
+  width: 100%;
+}
+
+.product-small-image {
+  -o-object-fit: cover;
+     object-fit: cover;
+  min-height: 50px;
+  width: 100%;
 }
 

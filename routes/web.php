@@ -19,6 +19,10 @@ Route::get('/admin', function () {
     return view('admin.admin');
 });
 
+Route::get('/product', function () {
+    return view('product');
+});
+
 Auth::routes();
 
 Route::get('/', 'HomeController@index')->name('home');
