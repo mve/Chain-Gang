@@ -15,6 +15,11 @@ Route::get('/login', function () {
     return view('login');
 });
 
+Route::get('/cart', function () {
+    return view('cart');
+});
+
+
 Route::get('/admin', function () {
     return view('admin.admin');
 });
