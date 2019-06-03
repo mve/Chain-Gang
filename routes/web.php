@@ -23,6 +23,12 @@ Route::get('/product', function () {
     return view('product');
 });
 
+Route::get('/account', function () {
+    return view('profile');
+});
+
+Route::resource('users', 'UserController');
+
 Auth::routes();
 
 Route::get('/', 'HomeController@index')->name('home');
