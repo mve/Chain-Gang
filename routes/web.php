@@ -19,7 +19,6 @@ Route::get('/cart', function () {
     return view('cart');
 });
 
-
 Route::get('/admin', function () {
     return view('admin.admin');
 });
@@ -35,10 +34,6 @@ Route::get('/product', function () {
 Route::get('/account', function () {
     return view('profile');
 });
-
-//Route::get('/cart', function () {
-//    return view('cart')->name('cart');
-//});
 
 Route::resource('users', 'UserController');
 
