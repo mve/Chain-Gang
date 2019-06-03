@@ -19,6 +19,10 @@ Route::get('/admin', function () {
     return view('admin.admin');
 });
 
+Route::get('/catogory', function () {
+    return view('catogory');
+});
+
 Route::get('/product', function () {
     return view('product');
 });
