@@ -7,7 +7,7 @@
     <div class="container py-3">
         <div class="row">
             <div class="col-md-12 text-center py-3"><h3 class="d-inline-block">Nieuwe producten</h3></div>
-            <div class="col-md-4 py-3">
+            <div class="col-md-4 py-3 shaduw">
                 <div class="card" style="w-100 h-100">
                     <img class="card-img-top" src="https://via.placeholder.com/400x300.png" alt="Card image cap">
                     <div class="card-body">
@@ -19,7 +19,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 py-3">
+            <div class="col-md-4 py-3 shaduw">
                 <div class="card" style="w-100 h-100">
                     <img class="card-img-top" src="https://via.placeholder.com/400x300.png" alt="Card image cap">
                     <div class="card-body">
@@ -31,7 +31,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 py-3">
+            <div class="col-md-4 py-3  shaduw">
                 <div class="card" style="w-100 h-100">
                     <img class="card-img-top" src="https://via.placeholder.com/400x300.png" alt="Card image cap">
                     <div class="card-body">
