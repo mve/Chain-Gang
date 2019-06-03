@@ -6,10 +6,10 @@
 
         <i class="far fa-2x fa-id-card mr-4 text-white"></i>
         </button>
+
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="{{ route('logout') }}"
-                   onclick="event.preventDefault();
-                                                             document.getElementById('logout-form').submit();">
+
+                <a class="dropdown-item" href="account">
                     {{ __('My Profile') }}
                 </a>
 

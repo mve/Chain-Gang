@@ -27,6 +27,10 @@ Route::get('/account', function () {
     return view('profile');
 });
 
+//Route::get('/cart', function () {
+//    return view('cart')->name('cart');
+//});
+
 Route::resource('users', 'UserController');
 
 Auth::routes();
