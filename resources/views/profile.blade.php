@@ -22,8 +22,8 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="straat">Straat</label>
-                    <input class="form-control" id="straat" name="street" type="text">
+                    <label for="adres">adres</label>
+                    <input class="form-control" id="adres" name="address" type="text">
                 </div>
 
                 <div class="form-group">
