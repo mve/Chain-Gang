@@ -15,7 +15,6 @@
                 $user = Auth::user();
                 ?>
 
-
                 <div class="form-group">
                     <label for="voornaam">Voornaam</label>
                     <input class="form-control" id="voornaam" name="name" type="text" value="{{$user->name}}">
