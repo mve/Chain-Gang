@@ -98,3 +98,14 @@ body {
   width: 100%;
 }
 
+.span-quote {
+  font-size: 2.5rem;
+  color: #009fe3;
+}
+
+.review-author {
+  font-weight: bold;
+  font-style: italic;
+  font-size: 12px;
+}
+
