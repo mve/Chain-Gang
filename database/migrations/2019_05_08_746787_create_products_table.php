@@ -21,6 +21,13 @@ class CreateProductsTable extends Migration
             $table->text('description');
             $table->string('image');
             $table->double('price');
+            $table->integer('gears');
+            $table->integer('frame');
+            $table->string('brand');
+            $table->string('color');
+            $table->string('year');
+            $table->string('rating');
+
 
 
 
