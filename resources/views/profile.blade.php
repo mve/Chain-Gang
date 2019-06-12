@@ -9,11 +9,23 @@
                 <h3 class="d-inline-block">Uw account</h3>
             </div>
 
-            <form class="col-md-12">
+            @if ($errors->any())
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
 
-                <?php
-                $user = Auth::user();
-                ?>
+            <?php
+            $user = Auth::user();
+            ?>
+
+            <form class="col-md-12" method="post" action="{{ route('users.update', $user) }}">
+                {{csrf_field()}}
+                {{method_field('patch')}}
 
                 <div class="form-group">
                     <label for="voornaam">Voornaam</label>
@@ -32,7 +44,8 @@
 
                 <div class="form-group">
                     <label for="postcode">Postcode</label>
-                    <input class="form-control" id="postcode" name="postal_code" type="text" value="{{$user->postal_code}}">
+                    <input class="form-control" id="postcode" name="postal_code" type="text"
+                           value="{{$user->postal_code}}">
                 </div>
 
                 <div class="form-group">
@@ -48,6 +61,7 @@
                 <div class="form-group">
                     <label for="email">Email</label>
                     <input class="form-control" id="email" name="email" type="email" value="{{$user->email}}">
+
                 </div>
 
                 <div class="form-group">

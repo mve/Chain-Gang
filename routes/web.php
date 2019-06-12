@@ -35,6 +35,8 @@ Route::get('/account', function () {
     return view('profile');
 });
 
+Route::patch('users/{user}/update', ['as' => 'users.update', 'uses' => 'UserController@update']);
+
 Route::resource('users', 'UserController');
 
 Auth::routes();
