@@ -44,7 +44,7 @@ box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
 }
 
 .footer-content {
-    height: 200px;
+    height: auto;
     background-color: #5996b0;
 }
 
@@ -95,4 +95,20 @@ box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
 .product-small-image{object-fit: cover; min-height: 50px; width: 100%;}
 .span-quote{font-size: 2.5rem; color :#009fe3}
 .review-author{font-weight: bold; font-style: italic; font-size: 12px;}
+
+// -------- winkelwagen
+.cart-product {
+    width: 100%;
+    height: auto;
+    background-color: #eeee;
+    border-bottom: 1px dashed grey;
+}
+
+.cart-product-image{
+    object-fit: cover;
+    height: 75px;
+    width: 100px;
+}
+
+
 

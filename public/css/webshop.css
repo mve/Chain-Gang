@@ -38,7 +38,7 @@ body {
 }
 
 .footer-content {
-  height: 200px;
+  height: auto;
   background-color: #5996b0;
 }
 
@@ -107,5 +107,19 @@ body {
   font-weight: bold;
   font-style: italic;
   font-size: 12px;
+}
+
+.cart-product {
+  width: 100%;
+  height: auto;
+  background-color: #eeee;
+  border-bottom: 1px dashed grey;
+}
+
+.cart-product-image {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 75px;
+  width: 100px;
 }
 

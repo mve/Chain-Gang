@@ -34,7 +34,7 @@
     </div>
 </div>
 <div class="container-fluid p-0 m-0 header-image d-flex align-items-center justify-content-center">
-    <img class="header-logo" src="images/template/logo.png">
+    <a href="{{ route('home') }}"><img class="header-logo" src="images/template/logo.png"></a>
 </div>
 <nav class="navbar navbar-expand-lg">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
