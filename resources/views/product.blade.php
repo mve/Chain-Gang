@@ -49,10 +49,12 @@
                     <div class="col-md-6">
                             <h4 class="mb-2 product-title">Schrijf een review</h4>
                             <!----- review formulier hier ----->
-
-
-
-
+                            <div class="form-group">
+                                <label for="review">Review tekst</label>
+                                <textarea class="form-control review-textarea" id="review-tekst"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary float-right">Review plaatsen</button>
+                            </form>
                             <!----- einde review formulier ----->
                     </div>
                 </div>
