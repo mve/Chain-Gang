@@ -98,10 +98,7 @@ class UserController extends Controller
 
         $user->save();
 
-        dd('ging goed');
-
         return back();
-
     }
 
     /**
