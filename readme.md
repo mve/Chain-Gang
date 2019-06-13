@@ -18,6 +18,6 @@ php artisan key:generate
 
 ## Launch:
 composer update <br>
-php artisan migrate <br>
+php artisan migrate:fresh --seed <br>
 * php artisan serve (Start de server op)
 * npm run watch (compile de scss)
