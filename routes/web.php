@@ -39,6 +39,8 @@ Route::patch('users/{user}/update', ['as' => 'users.update', 'uses' => 'UserCont
 
 Route::resource('users', 'UserController');
 
+Route::resource('products', 'ProductController');
+
 Auth::routes();
 
 Route::get('/', 'HomeController@index')->name('home');

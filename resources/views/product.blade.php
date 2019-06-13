@@ -20,8 +20,8 @@
                 </div>
             </div>
             <div class="col-md-6 p-3 p-md-5">
-                <h4 class="mb-4 product-title">Schitterende fiets 01</h4>
-                <p>Blabla wat een schitterende omschrijving dus hier gaan we een heleboel mooie product gegevens neerknallen en wat informatie verschaffen maargoed heb nu echt genoeg getypt en heb er geen zin meer in. Doei.</p>
+                <h4 class="mb-4 product-title">{{$product->name}}</h4>
+                <p>{{$product->description}}</p>
                 <div class="text-right">
                         <input type="number" min="1" max="9" step="1" value="1">
                         <a href="#" class="btn btn-primary ml-1">Toevoegen <i class="fas fa-cart-plus"></i></a>
