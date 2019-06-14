@@ -20,8 +20,25 @@ Route::get('/cart', function () {
 });
 
 Route::get('/admin', function () {
-    return view('admin.admin');
+    return view('admin.dashboard');
 });
+
+Route::get('/admin/orders', function () {
+    return view('admin.orders');
+});
+
+Route::get('/admin/klanten', function () {
+    return view('admin.klanten');
+});
+
+Route::get('/admin/producten', function () {
+    return view('admin.producten');
+});
+
+Route::get('/admin/instellingen', function () {
+    return view('admin.instellingen');
+});
+
 
 Route::get('/category', function () {
     return view('category');

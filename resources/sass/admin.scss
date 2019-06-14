@@ -1,17 +1,88 @@
-.sidebar-header {
-  padding: 5px;
-  margin-top: 20px;
+.admin-footer{
+    height: 50px;
+    width: 100%;
+    background-color: #1a5b77;
+    color: #fff;
 }
 
-@media only screen and (min-width: 992px) {
-  .sidebar-container {
+.admin-page{
+    height: calc(100vh - 50px);
+    width: 100% !important;
+    padding-left: 200px;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    min-height: 100vh;
+}
+
+
+.fixed-sidebar{
+    z-index: 9999;
     position: fixed;
-    left: 0;
-    top: 0;
-    padding-top: 60px;
-    min-width: 200px;
-    bottom: 0;
-    box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
-    background-color: #f2f2f2;
-  }
+    width: 200px;
+    background-color: #1a5b77;
+    height: 100vh;
+    color: #fff;
+}
+
+.fixed-sidebar a{
+    color: #fff;
+    text-decoration: none;
+}
+
+#open-menu{
+    display: none;
+}
+
+.menu-actions{
+    color: #fff;
+}
+
+.menu-actions a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.menu-icon {
+    font-size: 1.2rem;
+}
+
+.menu-item:hover{
+    background-color: #c1c1c1;
+}
+
+#mobile-menu{
+    background-color: #828282;
+    color: #fff;
+}
+
+#mobile-menu a{
+    text-decoration: none;
+    color: #fff;
+}
+
+#mobile-menu .menu-icon {
+    font-size: 1.5rem;
+}
+
+.card-header{
+    background-color: #009fe3;
+    color: #fff;
+}
+
+.omzet-grafiek{
+    display: block;
+    height: 50%;
+    width: 100%;
+}
+
+@media (max-width: 576px) {
+    .admin-page{
+        width: 100% !important;
+        padding-left: 0 !important;
+        padding-top: 0;
+        padding-right: 0;
+        padding-bottom: 0;
+        min-height: 100vh;
+    }
 }
