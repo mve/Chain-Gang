@@ -5,8 +5,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="{{ URL::asset('css/app.css') }}">
         <link rel="stylesheet" href="{{ URL::asset('css/admin.css') }}">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
-            integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.datatables.net/rowreorder/1.2.5/css/rowReorder.dataTables.min.css">
+        <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.3/css/responsive.dataTables.min.css">
         <title>Chain gang</title>
     </head>
 <body>
@@ -53,8 +55,41 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script src="//cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
 
     <script>
+        $(document).ready( function () {
+            //DataTable
+            $('#orders-data-table').DataTable({
+                rowReorder: {
+                    selector: 'td:nth-child(2)'
+                },
+                responsive: true
+            });
+
+            //Grafiek
+            var ctx = document.getElementById('canvas').getContext('2d');
+            var chart = new Chart(ctx, {
+                // The type of chart we want to create
+                type: 'line',
+
+                // The data for our dataset
+                data: {
+                    labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+                    datasets: [{
+                        label: 'Omzet',
+                        backgroundColor: 'rgb(26, 91, 119)',
+                        borderColor: 'rgb(26, 91, 119)',
+                        data: [12000, 17000, 35000, 8000, 12000, 26000, 9000]
+                    }]
+                },
+
+                // Configuration options go here
+                options: {}
+            });
+        } );
+
+
         $("#close-menu").on('click', function(){
             $( ".menu-link" ).fadeOut( "fast", function() {
                 $(".fixed-sidebar").animate({'width' : '50px'});
@@ -72,27 +107,6 @@
                 $( ".menu-link" ).fadeIn("fast");
             });
         })
-
-        //Grafiek
-        var ctx = document.getElementById('canvas').getContext('2d');
-        var chart = new Chart(ctx, {
-            // The type of chart we want to create
-            type: 'line',
-
-            // The data for our dataset
-            data: {
-                labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
-                datasets: [{
-                    label: 'Omzet',
-                    backgroundColor: 'rgb(26, 91, 119)',
-                    borderColor: 'rgb(26, 91, 119)',
-                    data: [12000, 17000, 35000, 8000, 12000, 26000, 9000]
-                }]
-            },
-
-            // Configuration options go here
-            options: {}
-        });
     </script>
 
 
