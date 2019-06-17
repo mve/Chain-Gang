@@ -7,18 +7,36 @@
             <h3 class="m-0">ChainGang - Klanten</h3>
         </div>
 
-        <div class="container">
-            <div class="row">
 
-                @foreach($users as $user)
+            <div class="col-12">
 
-                    <div style="text-align: center" class="col-md-12">
-                        <p>{{$user->name . " " . $user->lastname . " " . $user->email}}</p>
-                    </div>
 
-                @endforeach
+            <table class="GeneratedTable">
+                    <thead>
+                        <tr>
+                        <th>Header Cell 1</th>
+                        <th>Header Cell 2</th>
+                        <th>Header Cell 3</th>
+                        <th>Header Cell 4</th>
+                        </tr>
+                        </thead>
+                            <tbody>
 
-            </div>
+
+                            @foreach($users as $user)
+
+                            <tr>
+                                <td>{{$user->name . " " . $user->lastname}}</td>
+                                <td>{{$user->email}}
+                            </tr>
+
+                            @endforeach
+
+                            </tbody>
+                    </table>
+
+
+
         </div>
 
     </div>
