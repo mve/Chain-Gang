@@ -16,9 +16,9 @@ class AdminDashboardController extends Controller
     public function index()
     {
         $orders = Order::all();
-        $klanten = User::all();
+        $users = User::all();
 
-        return view('admin.dashboard', compact('orders','klanten'));
+        return view('admin.dashboard', compact('orders','users'));
     }
 
     /**

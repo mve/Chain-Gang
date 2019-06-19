@@ -29,11 +29,11 @@
     <div class="col-md-3 mt-4 mt-sm-4 mt-md-4">
             <div class="card h-100 w-100">
         <div class="card-header">
-            Recente nieuwe klanten
+            Nieuwste klanten
         </div>
         <ul class="list-group list-group-flush">
-                @foreach($klanten->reverse()->take(5) as $klant)
-                    <li class="list-group-item"><a href="#"">{{$klant->name . " " . $klant->lastname}}</a></li>
+                @foreach($users->reverse()->take(5) as $user)
+                    <li class="list-group-item"><a href="#"">{{$user->name . " " . $user->lastname}}</a></li>
                 @endforeach
         </ul>
         </div>
