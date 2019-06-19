@@ -57,10 +57,11 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
     <script src="//cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
 
+
     <script>
         $(document).ready( function () {
             //DataTable
-            $('#orders-data-table').DataTable({
+            $('#data-table').DataTable({
                 rowReorder: {
                     selector: 'td:nth-child(2)'
                 },

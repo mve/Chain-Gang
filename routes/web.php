@@ -57,6 +57,12 @@ Route::resource('users', 'UserController');
 
 Route::resource('admin/klanten', 'AdminUserController');
 
+Route::resource('admin/orders', 'AdminOrderController');
+
+Route::resource('admin/producten', 'AdminProductController');
+
+Route::resource('admin/', 'AdminDashboardController');
+
 Route::resource('products', 'ProductController');
 
 Route::resource('reviews', 'ReviewController');
