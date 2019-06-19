@@ -59,6 +59,8 @@ Route::resource('admin/klanten', 'AdminUserController');
 
 Route::resource('products', 'ProductController');
 
+Route::resource('reviews', 'ReviewController');
+
 Auth::routes();
 
 Route::get('/', 'HomeController@index')->name('home');
