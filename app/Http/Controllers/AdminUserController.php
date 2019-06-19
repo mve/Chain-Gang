@@ -48,7 +48,10 @@ class AdminUserController extends Controller
      */
     public function show(User $user)
     {
-        //
+
+        dd($user);
+
+        return view('admin.klanten_detail', compact('user'));
     }
 
     /**
