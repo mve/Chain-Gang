@@ -39,7 +39,6 @@ Route::get('/admin/instellingen', function () {
     return view('admin.instellingen');
 });
 
-
 Route::get('/category', function () {
     return view('category');
 });
@@ -55,6 +54,8 @@ Route::get('/account', function () {
 Route::patch('users/{user}/update', ['as' => 'users.update', 'uses' => 'UserController@update']);
 
 Route::resource('users', 'UserController');
+
+Route::resource('admin/klanten', 'AdminUserController');
 
 Route::resource('products', 'ProductController');
 
