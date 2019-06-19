@@ -55,7 +55,9 @@ Route::patch('users/{user}/update', ['as' => 'users.update', 'uses' => 'UserCont
 
 Route::resource('users', 'UserController');
 
-Route::resource('admin/klanten', 'AdminUserController');
+Route::get('admin/klanten', 'AdminUserController@index');
+
+Route::get('admin/klanten/{id}', ['as' => 'admin.klanten_detail', 'uses' => 'AdminUserController@show']);
 
 Route::resource('products', 'ProductController');
 
