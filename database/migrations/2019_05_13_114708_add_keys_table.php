@@ -25,11 +25,6 @@ class AddKeysTable extends Migration
                 ->onDelete('cascade');
         });
 
-        Schema::table('reviews', function (Blueprint $table) {
-            $table->foreign('product_id')
-                ->references('id')->on('products')
-                ->onDelete('cascade');
-        });
     }
 
     /**

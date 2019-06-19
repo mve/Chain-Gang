@@ -11,13 +11,8 @@
     <div class="col-12 my-4 schaduw">
         <div class="row">
             <div class="col-md-6 p-3 p-md-5">
-                <img class="product-image" src="https://dummyimage.com/600x400/5bc3f7/ffffff" class="img-fluid h-100 w-100" alt="product foto">
-                <div class="row py-3">
-                    <div class="col-3"><img class="product-small-image" src="https://dummyimage.com/600x400/5bc3f7/ffffff" class="img-fluid h-100 w-100" alt="product foto"></div>
-                    <div class="col-3"><img class="product-small-image" src="https://dummyimage.com/600x400/5bc3f7/ffffff" class="img-fluid h-100 w-100" alt="product foto"></div>
-                    <div class="col-3"><img class="product-small-image" src="https://dummyimage.com/600x400/5bc3f7/ffffff" class="img-fluid h-100 w-100" alt="product foto"></div>
-                    <div class="col-3"><img class="product-small-image" src="https://dummyimage.com/600x400/5bc3f7/ffffff" class="img-fluid h-100 w-100" alt="product foto"></div>
-                </div>
+                <img class="product-image" src="/images/{{$product->image}}" class="img-fluid h-100 w-100" alt="product foto">
+
             </div>
             <div class="col-md-6 p-3 p-md-5">
                 <h4 class="mb-4 product-title">{{$product->name}}</h4>
@@ -27,36 +22,7 @@
                         <a href="#" class="btn btn-primary ml-1">Toevoegen <i class="fas fa-cart-plus"></i></a>
                 </div>
             </div>
-            <div class="col-md-12 p-3 p-md-5">
-                <div class="row">
-                    <div class="col-md-6">
-                            <h4 class="mb-2 product-title">Reviews</h4>
-                                <!--- dit loopen --->
-                                <div class="review py-2">
-                                    <q>Review tekst hier dusja hier moeten we dat laten zien man wat ben ik slecht in placeholder tekst verzinnen pfoew, ik word nu wel moe in de vingers hoor. Ciao.</q>
-                                    <p class="review-author mt-1">- Mart Vrieze</p>
-                                </div>
-                                 <div class="review py-2">
-                                    <q>Review tekst hier dusja hier moeten we dat laten zien man wat ben ik slecht in placeholder tekst verzinnen pfoew, ik word nu wel moe in de vingers hoor. Ciao.</q>
-                                    <p class="review-author mt-1">- Mart Vrieze</p>
-                                </div>
-                                 <div class="review py-2">
-                                    <q>Review tekst hier dusja hier moeten we dat laten zien man wat ben ik slecht in placeholder tekst verzinnen pfoew, ik word nu wel moe in de vingers hoor. Ciao.</q>
-                                    <p class="review-author mt-1">- Mart Vrieze</p>
-                                </div>
-                                <!---- einde loopen --->
-                    </div>
-                    <div class="col-md-6">
-                            <h4 class="mb-2 product-title">Schrijf een review</h4>
-                            <!----- review formulier hier ----->
 
-
-
-
-                            <!----- einde review formulier ----->
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
 </div>
