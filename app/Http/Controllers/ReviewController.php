@@ -15,7 +15,7 @@ class ReviewController extends Controller
     {
         $reviews = Review::all();
 
-        return view('reviews', compact('reviews'));
+        return view('reviews.reviews', compact('reviews'));
     }
 
     /**
@@ -25,7 +25,7 @@ class ReviewController extends Controller
      */
     public function create()
     {
-        //
+        return view('reviews.create');
     }
 
     /**
@@ -34,9 +34,18 @@ class ReviewController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store()
     {
-        //
+        $review = new Review();
+        $review->name = request('name');
+        $review->title = request('title');
+        $review->description =  request('description');
+
+        $review->save();
+
+
+
+        return redirect('/reviews');
     }
 
     /**
