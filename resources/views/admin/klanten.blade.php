@@ -9,29 +9,32 @@
 
             <div class="col-12">
 
-            <table class="GeneratedTable">
+
+                <table class="display nowrap w-100" id="data-table">
                     <thead>
                         <tr>
-                        <th>Header Cell 1</th>
-                        <th>Header Cell 2</th>
-                        <th>Header Cell 3</th>
-                        <th>Header Cell 4</th>
+                        <th>Klant ID</th>
+                        <th>Klant naam</th>
+                        <th>Email adres</th>
+                        <th>Plaats</th>
+                        <th>Acties</th>
                         </tr>
                         </thead>
                             <tbody>
 
 
                             @foreach($users as $user)
-
                             <tr>
                                 <a href="/admin/klanten/{{ $user->id }}">
                                     {{ $user->name }}
                                 </a>
 
+                                <td>{{$user->id}}</td>
                                 <td>{{$user->name . " " . $user->lastname}}</td>
-                                <td>{{$user->email}}
+                                <td>{{$user->email}}</td>
+                                <td>{{$user->city}}</td>
+                                <td class="text-center"><a href="#" class="btn btn-primary">Bewerken <i class="fas fa-edit"></i></a></td>
                             </tr>
-
                             @endforeach
 
                             </tbody>

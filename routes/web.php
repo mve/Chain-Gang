@@ -59,6 +59,12 @@ Route::get('admin/klanten', 'AdminUserController@index');
 
 Route::get('admin/klanten/{id}', ['as' => 'admin.klanten_detail', 'uses' => 'AdminUserController@show']);
 
+Route::resource('admin/orders', 'AdminOrderController');
+
+Route::resource('admin/producten', 'AdminProductController');
+
+Route::resource('admin/', 'AdminDashboardController');
+
 Route::resource('products', 'ProductController');
 
 Route::resource('reviews', 'ReviewController');

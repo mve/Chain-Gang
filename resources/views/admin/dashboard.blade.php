@@ -12,11 +12,9 @@
             Recente orders
         </div>
         <ul class="list-group list-group-flush">
-            <li class="list-group-item"><a href="#"">#10001</a></li>
-            <li class="list-group-item"><a href="#"">#10002</a></li>
-            <li class="list-group-item"><a href="#"">#10003</a></li>
-            <li class="list-group-item"><a href="#"">#10005</a></li>
-            <li class="list-group-item"><a href="#"">#10006</a></li>
+                @foreach($orders->reverse()->take(5) as $order)
+                <li class="list-group-item"><a href="#"">#{{$order->id}}</a></li>
+                @endforeach
         </ul>
         </div>
     </div>
@@ -31,12 +29,12 @@
     <div class="col-md-3 mt-4 mt-sm-4 mt-md-4">
             <div class="card h-100 w-100">
         <div class="card-header">
-            Recente orders
+            Nieuwste klanten
         </div>
         <ul class="list-group list-group-flush">
-            <li class="list-group-item">Cras justo odio</li>
-            <li class="list-group-item">Dapibus ac facilisis in</li>
-            <li class="list-group-item">Vestibulum at eros</li>
+                @foreach($users->reverse()->take(5) as $user)
+                    <li class="list-group-item"><a href="#"">{{$user->name . " " . $user->lastname}}</a></li>
+                @endforeach
         </ul>
         </div>
     </div>
