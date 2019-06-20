@@ -1,13 +1,13 @@
-@extends('common_template')
+@extends('admin.common_template_admin')
 
 @section('content')
 
-    <div class="container py-3">
-        <div class="row">
+    <div class="row no-gutters justify-content-center">
+        <div class="col-12 text-center py-3" id="pagina-titel">
+            <h3 class="m-0">ChainGang - Klanten</h3>
+        </div>
 
-            <div class="col-md-12 text-center py-3">
-                <h3 class="d-inline-block">Uw account</h3>
-            </div>
+        <div class="col-12">
 
             @if ($errors->any())
                 <div class="alert alert-danger">
@@ -18,10 +18,6 @@
                     </ul>
                 </div>
             @endif
-
-            <?php
-            $user = Auth::user();
-            ?>
 
             <form class="col-md-12" method="post" action="{{ route('users.update', $user) }}">
                 @csrf
@@ -74,7 +70,9 @@
                 <button type="submit" class="btn btn-primary">Submit</button>
 
             </form>
+
         </div>
+
     </div>
 
 @endsection

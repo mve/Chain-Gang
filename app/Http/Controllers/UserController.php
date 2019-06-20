@@ -77,24 +77,31 @@ class UserController extends Controller
     {
 
         $this->validate(request(), [
-            'name'        => ['required', 'string', 'max:255'],
-            'lastname'    => ['required', 'string', 'max:255'],
-            'address'     => ['required', 'string', 'max:255'],
-            'postal_code' => ['required', 'string', 'min:4'],
-            'city'        => ['required', 'string', 'max:255'],
-            'phone'       => ['required', 'numeric'],
-            'email'       => ['required', 'string', 'email', 'max:255', Rule::unique('users')->ignore($user->id),],
-            'password'    => ['required', 'string', 'min:8']
+            'name'        => ['sometimes', 'nullable', 'string', 'max:255'],
+            'lastname'    => ['sometimes', 'nullable', 'string', 'max:255'],
+            'address'     => ['sometimes', 'nullable', 'string', 'max:255'],
+            'postal_code' => ['sometimes', 'nullable', 'string', 'min:4'],
+            'city'        => ['sometimes', 'nullable', 'string', 'max:255'],
+            'phone'       => ['sometimes', 'nullable', 'numeric'],
+            'email'       => [
+                'sometimes',
+                'nullable',
+                'string',
+                'email',
+                'max:255',
+                Rule::unique('users')->ignore($user->id),
+            ],
+            'password'    => ['sometimes', 'nullable', 'string', 'min:8']
         ]);
 
-        $user->name        = $request->name;
-        $user->lastname    = $request->lastname;
-        $user->address     = $request->address;
-        $user->postal_code = $request->postal_code;
-        $user->city        = $request->city;
-        $user->phone       = $request->phone;
-        $user->email       = $request->email;
-        $user->password    = bcrypt(request('password'));
+        $user->name        = (isset($request->name) > 0) ? $request->name : $user->name;
+        $user->lastname    = (isset($request->lastname) > 0) ? $request->lastname : $user->lastname;
+        $user->address     = (isset($request->address) > 0) ? $request->address : $user->address;
+        $user->postal_code = (isset($request->postal_code) > 0) ? $request->postal_code : $user->postal_code;
+        $user->city        = (isset($request->city) > 0) ? $request->city : $user->city;
+        $user->phone       = (isset($request->phone) > 0) ? $request->phone : $user->phone;
+        $user->email       = (isset($request->email) > 0) ? $request->email : $user->email;
+        $user->password    = (isset($request->password) > 0) ? bcrypt(request('password')) : $user->password;
 
         $user->save();
 

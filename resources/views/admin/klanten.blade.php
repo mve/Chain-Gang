@@ -7,9 +7,7 @@
             <h3 class="m-0">ChainGang - Klanten</h3>
         </div>
 
-
             <div class="col-12">
-
 
             <table class="GeneratedTable">
                     <thead>
@@ -26,6 +24,10 @@
                             @foreach($users as $user)
 
                             <tr>
+                                <a href="/admin/klanten/{{ $user->id }}">
+                                    {{ $user->name }}
+                                </a>
+
                                 <td>{{$user->name . " " . $user->lastname}}</td>
                                 <td>{{$user->email}}
                             </tr>
