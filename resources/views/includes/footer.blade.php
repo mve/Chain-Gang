@@ -21,7 +21,7 @@
                 <div class="col-md-6 text-left mb-4 mb-sm-0">
                     <div class="footer-item-header w-100 mb-3"><h5 class="footer-title">Nieuwsbrief</h5></div>
                     <p class="my-1">Schrijf je in voor onze nieuwsbrief!</p>
-                    
+
                     <form>
                         <input id="text" placeholder="jouwemail@mail.nl" name="text" type="text" class="form-control w-50 d-inline-block">  <button name="submit" type="submit" class="btn btn-primary">Inschrijven</button>
                     </form>
