@@ -51,6 +51,11 @@ body {
   list-style-type: none;
 }
 
+.footer-title {
+  color: #fff;
+  font-weight: bold;
+}
+
 .navbar {
   background-color: #0d4e6a;
   color: white;
