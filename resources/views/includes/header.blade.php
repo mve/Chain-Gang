@@ -3,7 +3,6 @@
 
     <div class="dropdown">
         <button class="btn" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-
         <i class="far fa-2x fa-id-card mr-4 text-white"></i>
         </button>
 
@@ -27,10 +26,9 @@
 
 
     <div class="dropdown">
-        <a class="btn" href="cart">
+        <a class="btn" href="/cart">
             <i class="fas fa-2x fa-shopping-cart mr-4 text-white"></i>
         </a>
-
     </div>
 </div>
 <div class="container-fluid p-0 m-0 header-image d-flex align-items-center justify-content-center">
@@ -47,10 +45,10 @@
           <a class="nav-link" href="{{ route('home') }}">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
+          <a class="nav-link" href="#">Dames fietsen</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+            <a class="nav-link" href="#">Heren fietsen</a>
         </li>
       </ul>
     </div>
