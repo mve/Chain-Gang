@@ -47,6 +47,8 @@ Route::get('/account', function () {
     return view('profile');
 });
 
+Route::get('/category/{id}', 'ProductController@filter');
+
 Route::patch('users/{user}/update', ['as' => 'users.update', 'uses' => 'UserController@update']);
 
 Route::resource('users', 'UserController');
