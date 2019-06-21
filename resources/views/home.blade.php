@@ -46,11 +46,13 @@
         </div>
     </div>
     <!--------- mountainbike kopen? --------->
-    <div class="container-fluid p-0 m-0 d-flex align-items-center justify-content-center mountainbike-quote text-white">
-        <div class="row no-gutters">
-            <div class="col-md-12 text-center">
-                <h3>Moutainbike kopen?</h3>
-                <button type="button" class="btn btn-primary">Bekijk alles</button>
+    <div class="container-fluid p-0 m-0 mountainbike-quote text-white">
+        <div class="w-100 h-100 mountainbike-overlay d-flex align-items-center justify-content-center">
+            <div class="row no-gutters">
+                <div class="col-md-12 text-center">
+                    <h3>Moutainbike kopen?</h3>
+                    <a href="/category/4"><button type="button" class="btn btn-primary">Bekijk alles</button></a>
+                </div>
             </div>
         </div>
     </div>
@@ -59,7 +61,13 @@
         <div class="row">
             <div class="col-md-8">
                 <h3>Over ons</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id magna ullamcorper, vulputate ante vitae, luctus nibh. In mollis dolor interdum eros dictum sodales. Proin cursus vestibulum nulla at fermentum. Pellentesque vel odio metus. Pellentesque lacus neque, laoreet in finibus non, scelerisque in turpis. Morbi sollicitudin urna quis felis iaculis, eu ultrices arcu mattis. Suspendisse tincidunt orci odio, vitae laoreet erat faucibus eu. Praesent at urna varius, accumsan libero eget, pharetra metus. Mauris ac dui lobortis, varius ipsum sed, rhoncus ex. Morbi et malesuada neque.</p>
+                <p>
+                        Chain Gang is al ruim 80 jaar gevestigd in Doetinchem.
+                        We zijn in de loop der tijd uitgegroeid tot een grote tweedehands tweewielerspecialist met een zeer ruim assortiment, voor elk wat wils.
+                        Het is ons streven om iedereen van dienst te kunnen zijn op gebied van: fietsen, onderdelen, en accessoires.<br/><br/>
+
+                        Wij hebben een zeer ruime sortering aan gebruikte fietsen en gewone fietsen voor groot en klein. Tevens kunt u bij ons terecht voor diverse artikelen op het gebied van onderdelen en accessoires voor de fiets.
+                </p>
             </div>
             <div class="col-md-3 offset-md-1 d-flex justify-content-center align-items-center">
                 <img class="img-fluid" src="/images/template/kind-huiliehuil.png" alt="Over ons">
