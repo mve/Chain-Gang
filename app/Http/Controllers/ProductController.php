@@ -19,6 +19,13 @@ class ProductController extends Controller
         return view('category', compact('products'));
     }
 
+    public function filter($id)
+    {
+        $products = Product::where('category_id', $id)->get();
+
+        return view('category', compact('products'));
+    }
+
     /**
      * Show the form for creating a new resource.
      *
