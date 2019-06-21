@@ -32,6 +32,10 @@ body {
   background-size: cover;
 }
 
+.mountainbike-overlay {
+  background-color: rgba(0, 0, 0, 0.55);
+}
+
 .copyright-balk {
   height: 50px;
   background-color: #0d4e6a;

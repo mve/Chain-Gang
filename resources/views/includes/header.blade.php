@@ -47,24 +47,16 @@
                 </li>
 
                 <?php
-                $flights = App\Category::all();
+                $catogories = App\Category::all();
                 ?>
 
-                @foreach ($flights as $flight)
+                @foreach ($catogories as $catogory)
 
                     <li class="nav-item">
-                        <a class="nav-link" href="/category/{{$flight->id}}">{{$flight->name}}</a>
+                        <a class="nav-link" href="/category/{{$catogory->id}}">{{$catogory->name}}</a>
                     </li>
 
                 @endforeach
-
-{{--                <li class="nav-item">--}}
-{{--                    <a class="nav-link" href="#">Dames fietsen</a>--}}
-{{--                </li>--}}
-
-{{--                <li class="nav-item">--}}
-{{--                    <a class="nav-link" href="#">Heren fietsen</a>--}}
-{{--                </li>--}}
 
             </ul>
         </div>
