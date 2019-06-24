@@ -19,7 +19,14 @@
                 <p>{{$product->description}}</p>
                 <div class="text-right">
                         <input type="number" min="1" max="9" step="1" value="1">
-                        <a href="#" class="btn btn-primary ml-1">Toevoegen <i class="fas fa-cart-plus"></i></a>
+                        <form method="post" action="/add-to-cart">
+                        @csrf
+                        {{method_field('post')}}
+                        <input type="hidden" value="{{$product->id}}" name="id">
+                        <button type="submit" class="btn btn-primary ml-1">Toevoegen <i class="fas fa-cart-plus"></i></button>
+                    </form>
+
+
                 </div>
             </div>
 

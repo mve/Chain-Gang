@@ -91,4 +91,28 @@ class ProductController extends Controller
     {
         //
     }
+
+    public function addToCart(Request $request)
+    {
+        $id = $request->id;
+
+        if(session()->get('cart') !== null ) {
+            session()->regenerate();
+            session()->push('cart', $id);
+        }
+        else{
+            session()->put('cart', []);
+            session()->regenerate();
+            session()->push('cart', $id);
+        }
+
+                dd(session()->get('cart'));
+
+        return back();
+    }
+
+    public function cart()
+    {
+        return view('cart');
+    }
 }

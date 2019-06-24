@@ -70,3 +70,5 @@ Route::resource('reviews', 'ReviewController');
 Auth::routes();
 
 Route::get('/', 'HomeController@index')->name('home');
+
+Route::post('/add-to-cart', 'ProductController@addToCart');
