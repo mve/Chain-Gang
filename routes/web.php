@@ -15,9 +15,7 @@ Route::get('/login', function () {
     return view('login');
 });
 
-Route::get('/cart', function () {
-    return view('cart');
-});
+
 
 Route::get('/admin', function () {
     return view('admin.dashboard');
@@ -72,3 +70,5 @@ Auth::routes();
 Route::get('/', 'HomeController@index')->name('home');
 
 Route::post('/add-to-cart', 'ProductController@addToCart');
+
+Route::get('/cart', 'ProductController@cart');

@@ -97,10 +97,13 @@ class ProductController extends Controller
         $id = $request->id;
 
         if(session()->get('cart') !== null ) {
+            $arr = session()->get('cart');
+            array_push($arr,$id);
             session()->regenerate();
-            session()->push('cart', $id);
+            session()->put('cart', $arr);
         }
         else{
+
             session()->put('cart', []);
             session()->regenerate();
             session()->push('cart', $id);
@@ -113,6 +116,17 @@ class ProductController extends Controller
 
     public function cart()
     {
-        return view('cart');
+//        $products = session()->get('cart');
+        $session = session()->get('cart');
+
+
+        $products = Product::find($session);
+
+            //dd($products);
+
+
+
+
+        return view('cart' ,compact('products'));
     }
 }
