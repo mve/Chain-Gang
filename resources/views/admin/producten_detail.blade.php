@@ -9,6 +9,12 @@
 
         <div class="col-12">
 
+            <form action="{{route('products.destroy', $product)}}" method="POST">
+                @method('DELETE')
+                @csrf
+                <button type="submit" class="btn btn-danger">verwijderen</button>
+            </form>
+
             @if ($errors->any())
                 <div class="alert alert-danger">
                     <ul>
