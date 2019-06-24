@@ -43,12 +43,16 @@ class AdminProductController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Product  $product
+     * @param $id
+     *
      * @return \Illuminate\Http\Response
      */
-    public function show(Product $product)
+    public function show($id)
     {
-        //
+        $product = Product::where('id', $id)->get();
+        $product = $product[0];
+
+        return view('admin.producten_detail', compact('product'));
     }
 
     /**
