@@ -69,6 +69,8 @@ Auth::routes();
 
 Route::get('/', 'HomeController@index')->name('home');
 
-Route::post('/add-to-cart', 'ProductController@addToCart');
+Route::post('add-to-cart', 'ProductController@addToCart');
 
-Route::get('/cart', 'ProductController@cart');
+Route::get('cart', 'ProductController@cart');
+
+Route::delete('remove-from-cart', 'ProductController@remove');

@@ -102,31 +102,42 @@ class ProductController extends Controller
             session()->regenerate();
             session()->put('cart', $arr);
         }
-        else{
+        else {
 
             session()->put('cart', []);
             session()->regenerate();
             session()->push('cart', $id);
         }
-
-                dd(session()->get('cart'));
-
         return back();
     }
 
     public function cart()
     {
-//        $products = session()->get('cart');
         $session = session()->get('cart');
-
-
         $products = Product::find($session);
 
-            //dd($products);
-
-
-
-
         return view('cart' ,compact('products'));
+    }
+
+    public function remove(Request $request)
+    {
+        $id = request()->id;
+
+        $session = session()->get('cart');
+        $products = Product::where('id', '!=', $id)->find($session);
+
+        if($products->count() > 0)
+        {
+            session()->put('cart', $products);
+        }
+        else
+        {
+            session()->put('cart', []);
+
+        }
+
+
+
+        return back();
     }
 }
