@@ -13,7 +13,6 @@
                 <img class="img-fluid cart-product-image" src="https://via.placeholder.com/400x300.png">
                 <a href="#"><h4 class="m-0 ml-3">{{$product->name}}</h4></a>
                 <div class="cart-product-options ml-auto">
-                    <input type="number" min="1" max="9" step="1" value="1">
                     <form method="post" action="/remove-from-cart">
                         @csrf
 

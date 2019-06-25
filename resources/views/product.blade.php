@@ -18,7 +18,6 @@
                 <h4 class="mb-4 product-title">{{$product->name}}</h4>
                 <p>{{$product->description}}</p>
                 <div class="text-right">
-                        <input type="number" min="1" max="9" step="1" value="1">
                         <form method="post" action="/add-to-cart">
                         @csrf
                         {{method_field('post')}}
