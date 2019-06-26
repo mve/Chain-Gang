@@ -13,7 +13,9 @@
                         <img class="card-img-top" src="https://via.placeholder.com/400x300.png" alt="Card image cap">
                         <div class="card-body">
                             <h5 class="card-title">{{$product->name}}</h5>
+                            <b>€{{ number_format($product->price, 2)}}</b>
                              <p class="card-text">{{$product->description}}</p>
+
                              <div class="text-right">
                                 <a href="#" class="btn btn-primary">Toevoegen <i class="fas fa-cart-plus"></i></a>
                             </div>

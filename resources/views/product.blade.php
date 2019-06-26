@@ -17,13 +17,14 @@
             <div class="col-md-6 p-3 p-md-5">
                 <h4 class="mb-4 product-title">{{$product->name}}</h4>
                 <p>{{$product->description}}</p>
+                <h5>€{{ number_format($product->price, 2)}}</h5>
                 <div class="text-right">
                         <form method="post" action="/add-to-cart">
-                        @csrf
-                        {{method_field('post')}}
-                        <input type="hidden" value="{{$product->id}}" name="id">
-                        <button type="submit" class="btn btn-primary ml-1">Toevoegen <i class="fas fa-cart-plus"></i></button>
-                    </form>
+                            @csrf
+                            {{method_field('post')}}
+                            <input type="hidden" value="{{$product->id}}" name="id">
+                            <button type="submit" class="btn btn-primary ml-1">Toevoegen <i class="fas fa-cart-plus"></i></button>
+                        </form>
 
 
                 </div>

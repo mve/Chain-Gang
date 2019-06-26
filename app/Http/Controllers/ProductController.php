@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Order;
 use App\Product;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Validation\Rule;
 
 class ProductController extends Controller
@@ -182,7 +184,16 @@ class ProductController extends Controller
         $session  = session()->get('cart');
         $products = Product::find($session);
 
-        return view('cart', compact('products'));
+        $price = 0;
+        if($products != null) {
+            foreach ($products as $product) {
+                $price += $product->price;
+
+        }
+        }
+
+
+        return view('cart' ,compact('products','price'));
     }
 
     public function remove(Request $request)
@@ -201,5 +212,26 @@ class ProductController extends Controller
 
 
         return back();
+    }
+
+    public function makeOrder()
+    {
+        $session = session()->get('cart');
+        $products = Product::find($session);
+
+        if ($products != null) {
+            foreach ($products as $product) {
+                $order = new Order();
+                $order->product_id = $product->id;
+                $order->total = $product->price;
+                $order->user_id = Auth::id();
+                $order->save();
+            }
+        }
+
+        session()->put('cart', null);
+
+        return back();
+
     }
 }
