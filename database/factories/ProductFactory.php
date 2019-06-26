@@ -14,7 +14,7 @@ $factory->define(Product::class, function (Faker $faker) use ($factory) {
         'name' => $faker->name,
         'category_id' => $category_ids->random(),
         'description' => $faker->text,
-        'image' => 'example.jpg',
+        'image' => $faker->numberBetween(1, 5) . '.jpg',
         'price' => $faker->randomNumber(2),
         'gears' => $faker->numberBetween(1, 24),
         'frame' => $faker->numberBetween(1, 24),
