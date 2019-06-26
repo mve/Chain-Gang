@@ -32,7 +32,7 @@
         </div>
     </div>
     <div class="container-fluid p-0 m-0 header-image d-flex align-items-center justify-content-center">
-        <a href="{{ route('home') }}"><img class="header-logo" src="/images/template/logo.png"></a>
+        <a href="{{ route('home') }}"><img class="header-logo" src="{{ url('/images/template/') }}/logo.png"></a>
     </div>
     <nav class="navbar navbar-expand-lg">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -53,7 +53,7 @@
                 @foreach ($catogories as $catogory)
 
                     <li class="nav-item">
-                        <a class="nav-link" href="/category/{{$catogory->id}}">{{$catogory->name}}</a>
+                        <a class="nav-link" href="{{ url('/category/') }}/{{$catogory->id}}">{{$catogory->name}}</a>
                     </li>
 
                 @endforeach
