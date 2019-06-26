@@ -5,9 +5,14 @@
 use App\Product;
 use Faker\Generator as Faker;
 
-$factory->define(Product::class, function (Faker $faker) {
+
+
+$factory->define(Product::class, function (Faker $faker) use ($factory) {
+    $category_ids = App\Category::pluck('id');
+
     return [
         'name' => $faker->name,
+        'category_id' => $category_ids->random(),
         'description' => $faker->text,
         'image' => 'example.jpg',
         'price' => $faker->randomNumber(2),

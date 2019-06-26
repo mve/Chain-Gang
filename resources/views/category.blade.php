@@ -15,9 +15,14 @@
                             <h5 class="card-title">{{$product->name}}</h5>
                             <b>€{{ number_format($product->price, 2)}}</b>
                              <p class="card-text">{{$product->description}}</p>
-
                              <div class="text-right">
-                                <a href="#" class="btn btn-primary">Toevoegen <i class="fas fa-cart-plus"></i></a>
+                                 <form method="post" action="/add-to-cart">
+                                     @csrf
+                                     {{method_field('post')}}
+                                     <input type="hidden" value="{{$product->id}}" name="id">
+                                     <button type="submit" class="btn btn-primary">Toevoegen <i class="fas fa-cart-plus"></i></button>
+                                 </form>
+
                             </div>
                         </div>
                     </div>
