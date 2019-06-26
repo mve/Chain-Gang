@@ -101,6 +101,8 @@ class AdminOrderController extends Controller
      */
     public function destroy(Order $order)
     {
-        //
+        $order->delete();
+
+        return back();
     }
 }

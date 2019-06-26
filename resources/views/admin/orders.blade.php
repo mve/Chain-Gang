@@ -14,6 +14,7 @@
         <th>Klant naam</th>
         <th>Datum geplaatst</th>
         <th>Acties</th>
+            <th></th>
         </tr>
         </thead>
             <tbody>
@@ -23,6 +24,13 @@
                     <td>{{DB::table('users')->where('id', $order->id)->value('name')}} {{DB::table('users')->where('id', $order->id)->value('lastname')}}</td>
                     <td>{{$order->created_at}}</td>
                     <td class="text-center"><a href="/admin/orders/{{$order->id}}" class="btn btn-primary">Bewerken <i class="fas fa-edit"></i></a></td>
+
+                        <form method="POST" action="/admin/orders/{{$order->id}}">
+                            {{ method_field('DELETE') }}
+                            {{ csrf_field() }}
+
+                            <td class="text-center"><button type="submit" class="btn btn-danger">Delete</button></td>
+                        </form>
                 </tr>
                 @endforeach
             </tbody>

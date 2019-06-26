@@ -81,4 +81,7 @@ Route::get('cart', 'ProductController@cart');
 
 Route::delete('remove-from-cart', 'ProductController@remove');
 
+Route::post('newsletter', 'HomeController@addToNewsletter');
+
+
 Route::post('make-order', 'ProductController@makeOrder');
