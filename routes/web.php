@@ -74,3 +74,5 @@ Route::post('add-to-cart', 'ProductController@addToCart');
 Route::get('cart', 'ProductController@cart');
 
 Route::delete('remove-from-cart', 'ProductController@remove');
+
+Route::post('make-order', 'ProductController@makeOrder');
