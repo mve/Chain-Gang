@@ -39,7 +39,7 @@
                 <a href="{{ url('/admin/klanten/') }}" class="mr-3"><i class="fas fa-users menu-icon"></i></a>
                 <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" class="mr-3"><i class="fas fa-sign-out-alt menu-icon"></i></a>
             </div>
-            <div class="col-12 px-5 py-3" id="content">
+            <div class="col-12 px-5 py-3 mhv-100" id="content">
                 @yield('content')
             </div>
         </div>
