@@ -25,7 +25,7 @@
                 <div class="card-header">
                     Omzet
                 </div>
-                <canvas id="canvas" class="chartjs-render-monitor omzet-grafiek"></canvas>
+                <canvas id="canvas" class="chartjs-render-monitor"></canvas>
             </div>
         </div>
         <div class="col-md-3 mt-4 mt-sm-4 mt-md-4">
