@@ -36,7 +36,7 @@
             <div class="row no-gutters">
                 <div class="col-md-12 text-center">
                     <h3>Moutainbike kopen?</h3>
-                    <a href="{{ url('/category/4/') }}"><button type="button" class="btn btn-primary">Bekijk alles</button></a>
+                    <a href="{{ url('/category/3/') }}"><button type="button" class="btn btn-primary">Bekijk alles</button></a>
                 </div>
             </div>
         </div>
