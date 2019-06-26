@@ -5,9 +5,7 @@
 @section('content')
 
 <div class="container py-3">
-    <div class="col-12 my-4">
-        <h3>Product naam bitch</h3>
-    </div>
+
     <div class="col-12 my-4 schaduw">
         <div class="row">
             <div class="col-md-6 p-3 p-md-5">
