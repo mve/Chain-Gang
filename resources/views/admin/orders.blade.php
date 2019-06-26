@@ -22,7 +22,7 @@
                     <td>{{$order->id}}</td>
                     <td>{{DB::table('users')->where('id', $order->id)->value('name')}} {{DB::table('users')->where('id', $order->id)->value('lastname')}}</td>
                     <td>{{$order->created_at}}</td>
-                    <td class="text-center"><a href="#" class="btn btn-primary">Bewerken <i class="fas fa-edit"></i></a></td>
+                    <td class="text-center"><a href="/admin/orders/{{$order->id}}" class="btn btn-primary">Bewerken <i class="fas fa-edit"></i></a></td>
                 </tr>
                 @endforeach
             </tbody>
