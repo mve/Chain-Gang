@@ -20,12 +20,11 @@
                 <a href="#" id="open-menu"><i class="fas fa-arrow-right"></i></a>
             </div>
             <ul class="list-unstyled mt-3" id="menu-buttons">
-                <a href="/admin"><li class="menu-item px-3 py-2"><i class="fas fa-chart-line menu-icon"></i> <span class="menu-link">Dashboard</span></li></a>
-                <a href="/admin/orders"><li class="menu-item px-3 py-2"><i class="fas fa-inbox menu-icon"></i> <span class="menu-link">Orders</span></li></a>
-                <a href="/admin/producten"><li class="menu-item px-3 py-2"><i class="fas fa-bicycle menu-icon"></i> <span class="menu-link">Producten</span></li></a>
-                <a href="/admin/klanten"><li class="menu-item px-3 py-2"><i class="fas fa-users menu-icon"></i> <span class="menu-link">Klanten</span></li></a>
-                <a href="/admin/instellingen"><li class="menu-item px-3 py-2"><i class="fas fa-sliders-h menu-icon"></i> <span class="menu-link">Instellingen</span></li></a>
-                <a href="#"><li class="menu-item px-3 py-2"><i class="fas fa-sign-out-alt menu-icon"></i> <span class="menu-link">Uitloggen</span></li></a>
+                <a href="{{ url('/admin/') }}"><li class="menu-item px-3 py-2"><i class="fas fa-chart-line menu-icon"></i> <span class="menu-link">Dashboard</span></li></a>
+                <a href="{{ url('/admin/orders/') }}"><li class="menu-item px-3 py-2"><i class="fas fa-inbox menu-icon"></i> <span class="menu-link">Orders</span></li></a>
+                <a href="{{ url('/admin/producten/') }}"><li class="menu-item px-3 py-2"><i class="fas fa-bicycle menu-icon"></i> <span class="menu-link">Producten</span></li></a>
+                <a href="{{ url('/admin/klanten/') }}"><li class="menu-item px-3 py-2"><i class="fas fa-users menu-icon"></i> <span class="menu-link">Klanten</span></li></a>
+                <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><li class="menu-item px-3 py-2"><i class="fas fa-sign-out-alt menu-icon"></i> <span class="menu-link">Uitloggen</span></li></a>
             </ul>
         </div>
     </div>
@@ -34,22 +33,22 @@
     <div class="container-fluid m-0 admin-page">
         <div class="row no-gutters">
             <div class="col-12 p-3 d-flex d-sm-none" id="mobile-menu">
-                    <a href="/admin" class="mr-3"><i class="fas fa-chart-line menu-icon"></i></a>
-                    <a href="/admin/orders" class="mr-3"><i class="fas fa-inbox menu-icon"></i></a>
-                    <a href="/admin/producten" class="mr-3"><i class="fas fa-bicycle menu-icon"></i></a>
-                    <a href="/admin/klanten" class="mr-3"><i class="fas fa-users menu-icon"></i></a>
-                    <a href="/admin/instellingen" class="mr-3"><i class="fas fa-sliders-h menu-icon"></i></a>
-                    <a href="#" class="mr-3"><i class="fas fa-sign-out-alt menu-icon"></i></a>
+                <a href="{{ url('/admin/') }}" class="mr-3"><i class="fas fa-chart-line menu-icon"></i></a>
+                <a href="{{ url('/admin/orders/') }}" class="mr-3"><i class="fas fa-inbox menu-icon"></i></a>
+                <a href="{{ url('/admin/producten/') }}" class="mr-3"><i class="fas fa-bicycle menu-icon"></i></a>
+                <a href="{{ url('/admin/klanten/') }}" class="mr-3"><i class="fas fa-users menu-icon"></i></a>
+                <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" class="mr-3"><i class="fas fa-sign-out-alt menu-icon"></i></a>
             </div>
             <div class="col-12 px-5 py-3" id="content">
-
                 @yield('content')
-
-
             </div>
         </div>
         @include('includes.footer_admin')
     </div>
+
+    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+        @csrf
+    </form>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>

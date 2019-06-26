@@ -36,7 +36,7 @@
             <div class="row no-gutters">
                 <div class="col-md-12 text-center">
                     <h3>Moutainbike kopen?</h3>
-                    <a href="/category/4"><button type="button" class="btn btn-primary">Bekijk alles</button></a>
+                    <a href="{{ url('/category/4/') }}"><button type="button" class="btn btn-primary">Bekijk alles</button></a>
                 </div>
             </div>
         </div>
@@ -55,7 +55,7 @@
                 </p>
             </div>
             <div class="col-md-3 offset-md-1 d-flex justify-content-center align-items-center">
-                <img class="img-fluid" src="/images/template/kind-huiliehuil.png" alt="Over ons">
+                <img class="img-fluid" src="{{ url('/images/template/') }}/kind-huiliehuil.png" alt="Over ons">
             </div>
         </div>
     </div>
