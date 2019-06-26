@@ -24,17 +24,19 @@
                     </div>
                 </div>
                 @endforeach
-
+                <div class="cart-product d-flex align-items-center p-3">
                     <h3>Totale prijs: <b>€{{ number_format($price, 2)}}</b></h3>
-                    <br>
-                    <form method="post" action="/make-order">
-                        @csrf
-                        <button type="submit" class="btn btn-primary ">Afrekenen</button>
-                    </form>
+                    <div class="cart-product-options ml-auto">
+                        <form method="post" action="/make-order">
+                            @csrf
+                            <button type="submit" class="btn btn-primary ">Afrekenen</button>
+                        </form>
+                    </div>
+                </div>
                 @else
-
-
-            <p>Je hebt nog geen producten in je winkelmand!</p>
+                <div class="cart-product d-flex align-items-center p-3">
+                    <h3>Je hebt nog geen producten in je winkelmand!</h3>
+                </div>
             @endif
         </div>
     </div>
