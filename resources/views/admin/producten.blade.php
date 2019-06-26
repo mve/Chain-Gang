@@ -8,6 +8,11 @@
         </div>
 
         <div class="col-12">
+
+            <a href="/admin/product/aanmaken">
+                <div class="btn btn-success">aanmaken</div>
+            </a>
+
             <table class="display nowrap w-100" id="data-table">
                 <thead>
                 <tr>

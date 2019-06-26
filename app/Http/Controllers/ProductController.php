@@ -46,7 +46,37 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        $this->validate(request(), [
+            'category_id' => ['required', 'integer'],
+            'name'        => ['required', 'string', 'max:190'],
+            'description' => ['required', 'string'],
+            'image'       => ['required', 'string', 'max:190'],
+            'price'       => ['required', 'integer'],
+            'gears'       => ['required', 'integer'],
+            'frame'       => ['required', 'integer'],
+            'brand'       => ['required', 'string'],
+            'color'       => ['required', 'string', 'max:190'],
+            'year'        => ['required', 'string', 'max:190'],
+        ]);
+
+        $product = new Product([
+            'category_id' => $request->get('category_id'),
+            'name'        => $request->get('name'),
+            'description' => $request->get('description'),
+            'image'       => $request->get('image'),
+            'price'       => $request->get('price'),
+            'gears'       => $request->get('gears'),
+            'frame'       => $request->get('frame'),
+            'brand'       => $request->get('brand'),
+            'color'       => $request->get('color'),
+            'year'        => $request->get('year')
+        ]);
+
+        $product->save();
+
+        return redirect('/admin/producten');
+
     }
 
     /**
@@ -132,46 +162,42 @@ class ProductController extends Controller
     {
         $id = $request->id;
 
-        if(session()->get('cart') !== null ) {
+        if (session()->get('cart') !== null) {
             $arr = session()->get('cart');
-            array_push($arr,$id);
+            array_push($arr, $id);
             session()->regenerate();
             session()->put('cart', $arr);
-        }
-        else {
+        } else {
 
             session()->put('cart', []);
             session()->regenerate();
             session()->push('cart', $id);
         }
+
         return back();
     }
 
     public function cart()
     {
-        $session = session()->get('cart');
+        $session  = session()->get('cart');
         $products = Product::find($session);
 
-        return view('cart' ,compact('products'));
+        return view('cart', compact('products'));
     }
 
     public function remove(Request $request)
     {
         $id = request()->id;
 
-        $session = session()->get('cart');
+        $session  = session()->get('cart');
         $products = Product::where('id', '!=', $id)->find($session);
 
-        if($products->count() > 0)
-        {
+        if ($products->count() > 0) {
             session()->put('cart', $products);
-        }
-        else
-        {
+        } else {
             session()->put('cart', []);
 
         }
-
 
 
         return back();

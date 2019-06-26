@@ -45,6 +45,12 @@ Route::get('/account', function () {
     return view('profile');
 });
 
+Route::get('/admin/product/aanmaken', function () {
+    return view('admin.producten_aanmaken');
+});
+
+Route::post('admin/producten/aanmaken', 'ProductController@create');
+
 Route::get('/category/{id}', 'ProductController@filter');
 
 Route::patch('users/{user}/update', ['as' => 'users.update', 'uses' => 'UserController@update']);
