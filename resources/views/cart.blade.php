@@ -11,8 +11,8 @@
                 @if($products !== null)
                 @foreach($products as $product)
                 <div class="cart-product d-flex align-items-center p-3">
-                    <img class="img-fluid cart-product-image" src="https://via.placeholder.com/400x300.png">
-                    <a href="#"><h4 class="m-0 ml-3">{{$product->name}}</h4></a>
+                    <img class="img-fluid cart-product-image" src="/images/{{$product->image}}">
+                    <a href="/products/{{$product->id}}"><h4 class="m-0 ml-3">{{$product->name}}</h4></a>
                     <div class="cart-product-options ml-auto">
                         <form method="post" action="/remove-from-cart">
                             @csrf
