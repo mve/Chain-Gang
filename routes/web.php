@@ -15,9 +15,7 @@ Route::get('/login', function () {
     return view('login');
 });
 
-Route::get('/cart', function () {
-    return view('cart');
-});
+
 
 Route::get('/admin', function () {
     return view('admin.dashboard');
@@ -70,3 +68,9 @@ Route::resource('reviews', 'ReviewController');
 Auth::routes();
 
 Route::get('/', 'HomeController@index')->name('home');
+
+Route::post('add-to-cart', 'ProductController@addToCart');
+
+Route::get('cart', 'ProductController@cart');
+
+Route::delete('remove-from-cart', 'ProductController@remove');

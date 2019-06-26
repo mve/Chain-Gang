@@ -127,4 +127,53 @@ class ProductController extends Controller
 
         return redirect('admin/producten');
     }
+
+    public function addToCart(Request $request)
+    {
+        $id = $request->id;
+
+        if(session()->get('cart') !== null ) {
+            $arr = session()->get('cart');
+            array_push($arr,$id);
+            session()->regenerate();
+            session()->put('cart', $arr);
+        }
+        else {
+
+            session()->put('cart', []);
+            session()->regenerate();
+            session()->push('cart', $id);
+        }
+        return back();
+    }
+
+    public function cart()
+    {
+        $session = session()->get('cart');
+        $products = Product::find($session);
+
+        return view('cart' ,compact('products'));
+    }
+
+    public function remove(Request $request)
+    {
+        $id = request()->id;
+
+        $session = session()->get('cart');
+        $products = Product::where('id', '!=', $id)->find($session);
+
+        if($products->count() > 0)
+        {
+            session()->put('cart', $products);
+        }
+        else
+        {
+            session()->put('cart', []);
+
+        }
+
+
+
+        return back();
+    }
 }
